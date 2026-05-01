@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  background:
+    radial-gradient(circle at 18% 0, color-mix(in srgb, var(--primary) 9%, transparent), transparent 28rem),
+    linear-gradient(135deg, color-mix(in srgb, var(--page-bg) 82%, var(--surface)) 0%, var(--page-bg) 100%);
+  color: var(--ink);
+  transition: background 220ms ease, color 220ms ease;
+}
+
+app-footer {
+  margin-top: auto;
+}

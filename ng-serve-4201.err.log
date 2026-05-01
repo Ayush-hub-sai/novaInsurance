@@ -1,0 +1,197 @@
+[1m[33mNG02801: Angular detected that `HttpClient` is not configured to use `fetch` APIs. It's strongly recommended to enable `fetch` for applications that use Server-Side Rendering for better performance and compatibility. To enable `fetch`, add the `withFetch()` to the `provideHttpClient()` call at the root of the application.[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: ExpertAssistantComponent is not used within the template of AppComponent[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.ts:11:60:
+[37m      11 │ ...tlet, NavbarComponent, FooterComponent, [32mExpertAssistantComponent[37m],
+         ╵                                            [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:50:75:
+[37m      50 │ ...k" [style.transform]="'translateX(' + [32mcurrentSlide[37m * -100 + '%)'">
+         ╵                                          [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:51:63:
+[37m      51 │ ...arousel-slide" *ngFor="let slide of [32mserviceSlides[37m; let i = index">
+         ╵                                        [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'prevSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:69:62:
+[37m      69 │ ...tn carousel-prev" (click)="[32mprevSlide[37m()" [disabled]="currentSlid...
+         ╵                               [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:69:87:
+[37m      69 │ ...ousel-prev" (click)="prevSlide()" [disabled]="[32mcurrentSlide[37m === 0">
+         ╵                                                  [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'nextSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:62:
+[37m      72 │ ...tn carousel-next" (click)="[32mnextSlide[37m()" [disabled]="currentSlid...
+         ╵                               [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:87:
+[37m      72 │ ..."nextSlide()" [disabled]="[32mcurrentSlide[37m === serviceSlides.length...
+         ╵                              [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:104:
+[37m      72 │ ...xtSlide()" [disabled]="currentSlide === [32mserviceSlides[37m.length - 1">
+         ╵                                            [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:80:35:
+[37m      80 │               *ngFor="let slide of [32mserviceSlides[37m; let i = index"
+         ╵                                    [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:81:36:
+[37m      81 │               [class.active]="i === [32mcurrentSlide[37m"
+         ╵                                     [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'goToSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:82:23:
+[37m      82 │               (click)="[32mgoToSlide[37m(i)">
+         ╵                        [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'videoUrl' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:119:23:
+[37m      119 │                 [src]="[32mvideoUrl[37m"
+          ╵                        [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:50:75:
+[37m      50 │ ...k" [style.transform]="'translateX(' + [32mcurrentSlide[37m * -100 + '%)'">
+         ╵                                          [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:51:63:
+[37m      51 │ ...arousel-slide" *ngFor="let slide of [32mserviceSlides[37m; let i = index">
+         ╵                                        [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'prevSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:69:62:
+[37m      69 │ ...tn carousel-prev" (click)="[32mprevSlide[37m()" [disabled]="currentSlid...
+         ╵                               [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:69:87:
+[37m      69 │ ...ousel-prev" (click)="prevSlide()" [disabled]="[32mcurrentSlide[37m === 0">
+         ╵                                                  [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'nextSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:62:
+[37m      72 │ ...tn carousel-next" (click)="[32mnextSlide[37m()" [disabled]="currentSlid...
+         ╵                               [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:87:
+[37m      72 │ ..."nextSlide()" [disabled]="[32mcurrentSlide[37m === serviceSlides.length...
+         ╵                              [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:72:104:
+[37m      72 │ ...xtSlide()" [disabled]="currentSlide === [32mserviceSlides[37m.length - 1">
+         ╵                                            [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'serviceSlides' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:80:35:
+[37m      80 │               *ngFor="let slide of [32mserviceSlides[37m; let i = index"
+         ╵                                    [32m~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'currentSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:81:36:
+[37m      81 │               [class.active]="i === [32mcurrentSlide[37m"
+         ╵                                     [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'goToSlide' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:82:23:
+[37m      82 │               (click)="[32mgoToSlide[37m(i)">
+         ╵                        [32m~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'videoUrl' does not exist on type 'HomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:119:23:
+[37m      119 │                 [src]="[32mvideoUrl[37m"
+          ╵                        [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'services' does not exist on type 'any[]'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:53:78:
+[37m      53 │ ...-card class="service-card" *ngFor="let service of slide.[32mservices[37m">
+         ╵                                                            [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: '}' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:273:0:
+[37m      273 │ [32m[37m
+          ╵ [32m^[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: '}' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:273:0:
+[37m      273 │ [32m[37m
+          ╵ [32m^[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: '}' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:273:0:
+[37m      273 │ [32m[37m
+          ╵ [32m^[0m
+
+[39m[22m
+[1m[31m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS1005: '}' expected.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/home.component.ts:273:0:
+[37m      273 │ [32m[37m
+          ╵ [32m^[0m
+
+[39m[22m
