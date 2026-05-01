@@ -460,7 +460,7 @@ export class HomeComponent implements OnInit,
       ]);
     this
       .seoService
-      .setCanonicalUrl('https://novainsurance.com/');
+      .setCanonicalUrl('https://nova-insurance.vercel.app/');
   }
 
   ngAfterViewInit(): void {

@@ -72,6 +72,6 @@ export class AboutComponent implements OnInit {
       { property: 'og:title', content: 'About Nova Insurance - Our Mission and Values' },
       { property: 'og:description', content: 'Learn about Nova Insurance\'s mission, history, and commitment to providing exceptional insurance services.' }
     ]);
-    this.seoService.setCanonicalUrl('https://novainsurance.com/about');
+    this.seoService.setCanonicalUrl('https://nova-insurance.vercel.app/about');
   }
 }

@@ -17,7 +17,7 @@ export class InsuranceTypeBaseComponent implements OnInit {
       { property: 'og:title', content: `${this.title} - Nova Insurance` },
       { property: 'og:description', content: `Learn about ${this.title.toLowerCase()} from Nova Insurance.` }
     ]);
-    this.seoService.setCanonicalUrl(`https://novainsurance.com/${this.getSlug()}`);
+    this.seoService.setCanonicalUrl(`https://nova-insurance.vercel.app/${this.getSlug()}`);
   }
 
   private getSlug(): string {

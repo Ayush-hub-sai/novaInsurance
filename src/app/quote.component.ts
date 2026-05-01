@@ -159,7 +159,7 @@ export class QuoteComponent implements OnInit {
       { property: 'og:title', content: 'Get Free Insurance Quote - Nova Insurance' },
       { property: 'og:description', content: 'Get your free insurance quote from Nova Insurance. Compare rates for health, auto, life, home, travel, and business insurance.' }
     ]);
-    this.seoService.setCanonicalUrl('https://novainsurance.com/quote');
+    this.seoService.setCanonicalUrl('https://nova-insurance.vercel.app/quote');
   }
 
   onSubmit(): void {

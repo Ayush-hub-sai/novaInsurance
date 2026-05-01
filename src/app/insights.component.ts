@@ -104,6 +104,6 @@ export class InsightsComponent implements OnInit {
       { property: 'og:title', content: 'Insurance Trends and Insights - Nova Insurance' },
       { property: 'og:description', content: 'See what modern insurance buyers expect from coverage, service, claims, and digital tools.' }
     ]);
-    this.seoService.setCanonicalUrl('https://novainsurance.com/insights');
+    this.seoService.setCanonicalUrl('https://nova-insurance.vercel.app/insights');
   }
 }

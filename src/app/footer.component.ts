@@ -17,8 +17,8 @@ import { SeoService } from './seo.service';
             <span>Nova Insurance</span>
           </a>
           <p>Your trusted partner for simple, comprehensive insurance coverage across every stage of life.</p>
-          <meta itemprop="url" content="https://novainsurance.com">
-          <meta itemprop="logo" content="https://novainsurance.com/logo.png">
+          <meta itemprop="url" content="https://nova-insurance.vercel.app">
+          <meta itemprop="logo" content="https://nova-insurance.vercel.app/logo.png">
         </div>
 
         <div>
@@ -70,8 +70,8 @@ export class FooterComponent implements OnInit {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Nova Insurance",
-      "url": "https://novainsurance.com",
-      "logo": "https://novainsurance.com/logo.png",
+      "url": "https://nova-insurance.vercel.app",
+      "logo": "https://nova-insurance.vercel.app/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-123-4567",

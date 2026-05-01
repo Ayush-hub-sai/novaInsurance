@@ -222,7 +222,7 @@ export class ContactComponent implements OnInit {
       { property: 'og:title', content: 'Contact Nova Insurance - Get in Touch Today' },
       { property: 'og:description', content: 'Contact Nova Insurance for all your insurance needs. Get quotes, file claims, or ask questions.' }
     ]);
-    this.seoService.setCanonicalUrl('https://novainsurance.com/contact');
+    this.seoService.setCanonicalUrl('https://nova-insurance.vercel.app/contact');
 
     const structuredData = {
       "@context": "https://schema.org",
