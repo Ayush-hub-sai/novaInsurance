@@ -8,11 +8,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { SeoService } from './seo.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, CommonModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule],
+  imports: [ReactiveFormsModule, CommonModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule, MatSnackBarModule],
   standalone: true,
   template: `
     <section class="page-section">
@@ -203,7 +204,8 @@ export class ContactComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private seoService: SeoService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private snackBar: MatSnackBar
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -253,7 +255,11 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid) {
       this.isSubmitting = true;
       setTimeout(() => {
-        alert('Message sent successfully! We will get back to you soon.');
+        this.snackBar.open('Message sent successfully! We will get back to you soon.', 'Close', {
+          duration: 5000,
+          verticalPosition: 'bottom',
+          panelClass: ['snackbar-success']
+        });
         this.contactForm.reset({ subject: 'general' });
         this.isSubmitting = false;
       }, 1000);

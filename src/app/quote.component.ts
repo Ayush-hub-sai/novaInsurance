@@ -7,12 +7,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { QuoteRequest, QuoteService } from './quote.service';
 import { SeoService } from './seo.service';
 
 @Component({
   selector: 'app-quote',
-  imports: [ReactiveFormsModule, CommonModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule],
+  imports: [ReactiveFormsModule, CommonModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule, MatSnackBarModule],
   standalone: true,
   template: `
     <section class="page-section">
@@ -141,7 +142,8 @@ export class QuoteComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private quoteService: QuoteService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private snackBar: MatSnackBar
   ) {
     this.quoteForm = this.fb.group({
       name: ['', Validators.required],
@@ -168,12 +170,20 @@ export class QuoteComponent implements OnInit {
       const quote: QuoteRequest = this.quoteForm.value;
       this.quoteService.submitQuote(quote).subscribe({
         next: () => {
-          alert('Quote submitted successfully! We will contact you soon.');
+          this.snackBar.open('Quote submitted successfully! We will contact you soon.', 'Close', {
+            duration: 5000,
+            verticalPosition: 'bottom',
+            panelClass: ['snackbar-success']
+          });
           this.quoteForm.reset({ insuranceType: 'health' });
           this.isSubmitting = false;
         },
         error: () => {
-          alert('Error submitting quote. Please try again.');
+          this.snackBar.open('Error submitting quote. Please try again.', 'Close', {
+            duration: 5000,
+            verticalPosition: 'bottom',
+            panelClass: ['snackbar-error']
+          });
           this.isSubmitting = false;
         }
       });
