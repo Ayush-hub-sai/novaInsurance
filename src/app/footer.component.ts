@@ -46,7 +46,7 @@ import { SeoService } from './seo.service';
         <div>
           <h4>Contact</h4>
           <div itemscope itemtype="https://schema.org/ContactPoint">
-            <p><strong>Phone:</strong><br><span itemprop="telephone">(555) 123-4567</span></p>
+            <p><strong>Phone:</strong><br><span itemprop="telephone">+91 8658746040</span></p>
             <p><strong>Email:</strong><br><a href="mailto:info@novainsurance.com" itemprop="email">info@novainsurance.com</a></p>
           </div>
         </div>
@@ -74,17 +74,17 @@ export class FooterComponent implements OnInit {
       "logo": "https://nova-insurance.vercel.app/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
+        "telephone": "+91 8658746040",
         "contactType": "customer service",
         "email": "info@novainsurance.com"
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Insurance St",
+        "streetAddress": "Haute Street, Corporate Park",
         "addressLocality": "Insurance City",
         "addressRegion": "IC",
-        "postalCode": "12345",
-        "addressCountry": "US"
+        "postalCode": "700046",
+        "addressCountry": "INDIA"
       }
     };
     this.seoService.addStructuredData(structuredData);
