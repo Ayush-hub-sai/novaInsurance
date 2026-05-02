@@ -1,0 +1,51 @@
+<header class="app-toolbar">
+  <div class="container toolbar-inner">
+    <a routerLink="/" class="brand" aria-label="Nova Insurance home" (click)="closeMenu()">
+      <span class="brand-mark"><mat-icon>verified_user</mat-icon></span>
+      <span>Nova Insurance</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <button mat-button class="insurance-trigger" [matMenuTriggerFor]="insuranceMenu">
+        Insurance <mat-icon>expand_more</mat-icon>
+      </button>
+      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/insights" routerLinkActive="active">Insights</a>
+      <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+      <button mat-icon-button [matMenuTriggerFor]="themeMenu" aria-label="Change theme">
+        <mat-icon>{{ activeTheme.icon }}</mat-icon>
+      </button>
+      <a mat-flat-button color="primary" routerLink="/quote" routerLinkActive="active">Get Quote</a>
+    </nav>
+
+    <button mat-icon-button class="mobile-menu-button" type="button" aria-label="Toggle navigation" (click)="toggleMenu()">
+      <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+
+  <div class="mobile-panel" [class.open]="menuOpen">
+    <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+    <button mat-button [matMenuTriggerFor]="insuranceMenu">Insurance <mat-icon>expand_more</mat-icon></button>
+    <a mat-button routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+    <a mat-button routerLink="/insights" routerLinkActive="active" (click)="closeMenu()">Insights</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+    <button mat-button [matMenuTriggerFor]="themeMenu"><mat-icon>{{ activeTheme.icon }}</mat-icon>{{ activeTheme.label }} Theme</button>
+    <a mat-flat-button color="primary" routerLink="/quote" routerLinkActive="active" (click)="closeMenu()">Get Quote</a>
+  </div>
+
+  <mat-menu #insuranceMenu="matMenu" class="insurance-menu" [overlapTrigger]="false" xPosition="before">
+    <a mat-menu-item routerLink="/health" (click)="closeMenu()"><mat-icon>health_and_safety</mat-icon>Health Insurance</a>
+    <a mat-menu-item routerLink="/auto" (click)="closeMenu()"><mat-icon>directions_car</mat-icon>Auto Insurance</a>
+    <a mat-menu-item routerLink="/life" (click)="closeMenu()"><mat-icon>favorite</mat-icon>Life Insurance</a>
+    <a mat-menu-item routerLink="/home-insurance" (click)="closeMenu()"><mat-icon>home</mat-icon>Home Insurance</a>
+    <a mat-menu-item routerLink="/travel" (click)="closeMenu()"><mat-icon>flight_takeoff</mat-icon>Travel Insurance</a>
+    <a mat-menu-item routerLink="/business" (click)="closeMenu()"><mat-icon>business_center</mat-icon>Business Insurance</a>
+  </mat-menu>
+
+  <mat-menu #themeMenu="matMenu" class="insurance-menu theme-menu" [overlapTrigger]="false">
+    <button mat-menu-item *ngFor="let theme of themes" type="button" (click)="setTheme(theme.name)">
+      <mat-icon>{{ theme.icon }}</mat-icon>{{ theme.label }} Theme
+    </button>
+  </mat-menu>
+</header>

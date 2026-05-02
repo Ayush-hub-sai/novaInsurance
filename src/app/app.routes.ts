@@ -1,29 +1,29 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home.component';
-import { QuoteComponent } from './quote.component';
-import { HealthComponent } from './health.component';
-import { AutoComponent } from './auto.component';
-import { LifeComponent } from './life.component';
-import { HomeInsuranceComponent } from './home-insurance.component';
-import { TravelComponent } from './travel.component';
-import { BusinessComponent } from './business.component';
-import { AboutComponent } from './about.component';
-import { ContactComponent } from './contact.component';
-import { InsightsComponent } from './insights.component';
-import { NotFoundComponent } from './not-found.component';
+import { HomeComponent } from './features/home/home.component';
+import { AboutComponent } from './features/about/about.component';
+import { InsightsComponent } from './features/insights/insights.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, data: { title: 'Home - Nova Insurance' } },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'quote', component: QuoteComponent },
-  { path: 'health', component: HealthComponent },
-  { path: 'auto', component: AutoComponent },
-  { path: 'life', component: LifeComponent },
-  { path: 'home-insurance', component: HomeInsuranceComponent },
-  { path: 'travel', component: TravelComponent },
-  { path: 'business', component: BusinessComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'insights', component: InsightsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', component: NotFoundComponent }
+  { 
+    path: 'quote', 
+    loadComponent: () => import('./features/quote/quote.component').then(m => m.QuoteComponent),
+    data: { title: 'Get Quote - Nova Insurance' }
+  },
+  { 
+    path: 'contact', 
+    loadComponent: () => import('./features/contact/contact.component').then(m => m.ContactComponent),
+    data: { title: 'Contact - Nova Insurance' }
+  },
+  { path: 'about', component: AboutComponent, data: { title: 'About - Nova Insurance' } },
+  { path: 'insights', component: InsightsComponent, data: { title: 'Insights - Nova Insurance' } },
+  {
+    path: 'insurance',
+    loadChildren: () => import('./insurance/insurance.routes').then(m => m.INSURANCE_ROUTES),
+    data: { title: 'Insurance Products - Nova Insurance' }
+  },
+  { path: '**', component: NotFoundComponent, data: { title: '404 - Not Found' } }
 ];
+

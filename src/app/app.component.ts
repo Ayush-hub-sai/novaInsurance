@@ -2,15 +2,15 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, Inject, NgZone, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
-import { NavbarComponent } from './navbar.component';
-import { FooterComponent } from './footer.component';
-import { ExpertAssistantComponent } from './expert-assistant.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { ExpertAssistantComponent } from './layout/expert-assistant/expert-assistant.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, FooterComponent, ExpertAssistantComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   title = 'novaInsurance';
@@ -95,3 +95,4 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     return isPlatformBrowser(this.platformId);
   }
 }
+

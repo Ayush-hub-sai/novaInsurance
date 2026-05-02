@@ -4,10 +4,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "ng serve --open",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "build:analyze": "ng build --configuration production --stats-json && webpack-bundle-analyzer dist/nova-insurance/stats.json",
+    "preview:prod": "http-server dist/nova-insurance/browser -c-1 -o",
+    "serve:ssr": "npm run build:prod && node dist/nova-insurance/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:novaInsurance": "node dist/nova-insurance/server/server.mjs"
+    "lint": "ng lint",
+    "format": "prettier --write 'src/**/*.{ts,html,scss}'",
+    "format:check": "prettier --check 'src/**/*.{ts,html,scss}'"
   },
   "private": true,
   "dependencies": {

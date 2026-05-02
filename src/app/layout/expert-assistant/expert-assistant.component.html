@@ -1,0 +1,41 @@
+<div class="expert-assistant" [class.open]="isOpen">
+  <section class="expert-panel" *ngIf="isOpen" aria-label="Nova expert assistant">
+    <div class="expert-header">
+      <div>
+        <span>Nova Expert</span>
+        <strong>AI coverage guide</strong>
+      </div>
+      <button mat-icon-button type="button" aria-label="Close expert assistant" (click)="toggleOpen()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="expert-messages">
+      <div class="expert-message" [class.user]="message.from === 'user'" *ngFor="let message of messages">
+        {{ message.text }}
+      </div>
+    </div>
+
+    <div class="expert-prompts">
+      <button type="button" *ngFor="let prompt of prompts" (click)="ask(prompt)">
+        {{ prompt }}
+      </button>
+    </div>
+
+    <div class="expert-actions">
+      <a mat-flat-button color="primary" routerLink="/quote" (click)="toggleOpen()">
+        <mat-icon>request_quote</mat-icon>
+        Get Quote
+      </a>
+      <a mat-stroked-button color="primary" routerLink="/contact" (click)="toggleOpen()">
+        <mat-icon>support_agent</mat-icon>
+        Advisor
+      </a>
+    </div>
+  </section>
+
+  <button class="expert-fab" type="button" aria-label="Open expert assistant" (click)="toggleOpen()">
+    <mat-icon>{{ isOpen ? 'expand_more' : 'smart_toy' }}</mat-icon>
+    <span>Expert</span>
+  </button>
+</div>

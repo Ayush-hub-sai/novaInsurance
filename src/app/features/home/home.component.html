@@ -1,0 +1,117 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="section-kicker">Trusted coverage, simpler choices</p>
+      <h1>Protect what matters with insurance that feels clear.</h1>
+      <p>Compare coverage for your family, vehicle, home, trips, and business with guidance from advisors who keep the fine print human.</p>
+      <div class="hero-actions">
+        <a mat-flat-button color="primary" routerLink="/quote">Get a Free Quote</a>
+        <a mat-stroked-button routerLink="/about">Why Nova</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Coverage at a glance</h2>
+      <p>Fast quotes, practical options, and support when life changes.</p>
+      <div class="trust-grid">
+        <div class="trust-item" *ngFor="let stat of stats">
+          <span class="trust-number">{{ stat.value }}</span>
+          <span class="trust-label">{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section soft-band">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">Insurance products</p>
+      <h2 class="section-heading">Choose coverage for every chapter.</h2>
+      <p class="section-copy">Start with the policy you need today, then bundle and refine as your life changes.</p>
+    </div>
+
+    <div class="carousel-container">
+      <button class="carousel-btn left" (click)="scrollLeft()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+
+      <div class="carousel" #carousel>
+        <mat-card class="service-card" *ngFor="let service of services">
+          <mat-card-content>
+            <span class="icon-tile">
+              <mat-icon>{{ service.icon }}</mat-icon>
+            </span>
+            <mat-card-title>{{ service.name }}</mat-card-title>
+            <p>{{ service.description }}</p>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <a mat-button color="primary" [routerLink]="service.link">
+              Learn more <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+      <button class="carousel-btn right" (click)="scrollRight()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">Why customers stay</p>
+      <h2 class="section-heading">Built for confidence, not confusion.</h2>
+    </div>
+
+    <div class="benefits-grid">
+      <mat-card class="feature-card" *ngFor="let benefit of benefits">
+        <mat-card-content>
+          <span class="icon-tile"><mat-icon>{{ benefit.icon }}</mat-icon></span>
+          <mat-card-title>{{ benefit.title }}</mat-card-title>
+          <p>{{ benefit.text }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<section class="page-section soft-band">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">Market trends</p>
+      <h2 class="section-heading">Coverage that keeps up with modern risks.</h2>
+      <p class="section-copy">Insurance buyers are asking for faster service, stronger digital protection, and flexible policies that adapt as life changes.</p>
+    </div>
+
+    <div class="trend-grid">
+      <mat-card class="feature-card trend-card" *ngFor="let trend of trends">
+        <mat-card-content>
+          <span class="icon-tile"><mat-icon>{{ trend.icon }}</mat-icon></span>
+          <mat-card-title>{{ trend.title }}</mat-card-title>
+          <p>{{ trend.text }}</p>
+          <span class="trend-tag">{{ trend.tag }}</span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="section-actions">
+      <a mat-flat-button color="primary" routerLink="/insights">Explore Insights</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to get protected?</h2>
+    <p>Tell us what you need and we will shape a quote around your budget, risks, and priorities.</p>
+    <div class="cta-actions">
+      <a mat-flat-button color="primary" routerLink="/quote">Start My Quote</a>
+      <a mat-stroked-button routerLink="/contact">Talk to an Advisor</a>
+    </div>
+  </div>
+</section>

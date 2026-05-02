@@ -1,0 +1,29 @@
+<section class="page-section">
+  <div class="container content-grid">
+    <mat-card class="content-card">
+      <mat-card-content class="article-content">
+        <div class="insurance-title-row">
+          <span class="icon-tile"><mat-icon>{{ icon }}</mat-icon></span>
+          <div class="insurance-title-copy">
+            <p class="section-kicker">Nova Insurance</p>
+            <h1 class="section-heading">{{ title }}</h1>
+          </div>
+        </div>
+        <div [innerHTML]="description"></div>
+        <a mat-flat-button color="primary" routerLink="/quote">Get Quote</a>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="feature-card">
+      <mat-card-content>
+        <div class="feature-title-row">
+          <span class="icon-tile"><mat-icon>task_alt</mat-icon></span>
+          <mat-card-title>Why choose us?</mat-card-title>
+        </div>
+        <ul class="check-list">
+          <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
