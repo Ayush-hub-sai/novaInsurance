@@ -351,36 +351,36 @@ export class HomeComponent implements OnInit,
       name: 'Health Insurance',
       description: 'Medical, dental, vision, and preventive care options for families and individu' +
         'als.',
-      link: '/health'
+      link: '/insurance/health'
     }, {
       icon: 'directions_car',
       name: 'Auto Insurance',
       description: 'Collision, liability, comprehensive, and roadside protection for your vehicle.',
-      link: '/auto'
+      link: '/insurance/auto'
     }, {
       icon: 'favorite',
       name: 'Life Insurance',
       description: 'Term and permanent life coverage designed to support the people who count on y' +
         'ou.',
-      link: '/life'
+      link: '/insurance/life'
     }, {
       icon: 'home',
       name: 'Home Insurance',
       description: 'Protection for your home, belongings, liability, and additional living expense' +
         's.',
-      link: '/home-insurance'
+      link: '/insurance/home-insurance'
     }, {
       icon: 'flight_takeoff',
       name: 'Travel Insurance',
       description: 'Trip cancellation, emergency medical, baggage, and delay coverage wherever you' +
         ' go.',
-      link: '/travel'
+      link: '/insurance/travel'
     }, {
       icon: 'business_center',
       name: 'Business Insurance',
       description: 'Liability, property, workers compensation, and risk support for growing compan' +
         'ies.',
-      link: '/business'
+      link: '/insurance/business'
     }
   ];
 
