@@ -59,7 +59,7 @@ import { SeoService } from './seo.service';
                   <mat-icon>call</mat-icon>
                   <div>
                     <strong>Phone</strong>
-                    <a href="tel:+15551234567" itemprop="telephone">(555) 123-4567</a>
+                    <a href="tel:+155570004667" itemprop="telephone">+91 8658746040</a>
                   </div>
                 </div>
 
@@ -75,8 +75,8 @@ import { SeoService } from './seo.service';
                   <mat-icon>location_on</mat-icon>
                   <div>
                     <strong>Office</strong>
-                    <span itemprop="streetAddress">123 Insurance St</span><br>
-                    <span itemprop="addressLocality">Insurance City</span>, <span itemprop="addressRegion">IC</span> <span itemprop="postalCode">12345</span>
+                    <span itemprop="streetAddress">Haute Street, Corporate Park</span><br>
+                    <span itemprop="addressLocality">Insurance City</span>, <span itemprop="addressRegion">IC</span> <span itemprop="postalCode">700046</span>
                   </div>
                 </div>
 
@@ -196,8 +196,8 @@ export class ContactComponent implements OnInit {
   isSubmitting = false;
   isLocating = false;
   locationStatus = '';
-  officeAddress = '123 Insurance St, Insurance City, IC 12345';
-  mapsLink = 'https://www.google.com/maps/search/?api=1&query=123%20Insurance%20St%2C%20Insurance%20City%2C%20IC%2012345';
+  officeAddress = 'Haute Street, Corporate Park, Insurance City, IC 700046';
+  mapsLink = 'https://www.google.com/maps/search/?api=1&query=123%20Insurance%20St%2C%20Insurance%20City%2C%20IC%20700046';
   mapUrl: SafeResourceUrl;
 
   constructor(
@@ -212,7 +212,7 @@ export class ContactComponent implements OnInit {
       subject: ['general', Validators.required],
       message: ['', Validators.required]
     });
-    this.mapUrl = this.buildMapUrl('https://www.google.com/maps?q=123%20Insurance%20St%2C%20Insurance%20City%2C%20IC%2012345&output=embed');
+    this.mapUrl = this.buildMapUrl('https://www.google.com/maps?q=123%20Insurance%20St%2C%20Insurance%20City%2C%20IC%20700046&output=embed');
   }
 
   ngOnInit(): void {
@@ -232,17 +232,17 @@ export class ContactComponent implements OnInit {
         "name": "Nova Insurance",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+1-555-123-4567",
+          "telephone": "+91 8658746040",
           "contactType": "customer service",
           "email": "info@novainsurance.com"
         },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 Insurance St",
+          "streetAddress": "Haute Street, Corporate Park",
           "addressLocality": "Insurance City",
           "addressRegion": "IC",
-          "postalCode": "12345",
-          "addressCountry": "US"
+          "postalCode": "700046",
+          "addressCountry": "INDIA"
         }
       }
     };
